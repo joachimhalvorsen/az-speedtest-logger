@@ -10,6 +10,7 @@ namespace SpeedTestLogger
         public readonly RegionInfo LoggerLocation;
         public readonly int LoggerId;
         public readonly string UserId;
+        public readonly Uri ApiUrl;
 
         public LoggerConfiguration()
         {  
@@ -24,6 +25,7 @@ namespace SpeedTestLogger
             Console.WriteLine("Logger located in {0}", LoggerLocation.EnglishName);  
 
             UserId = configuration["userId"];
+            ApiUrl = new Uri(configuration["speedTestApiUrl"]);
             LoggerId = Int32.Parse(configuration["loggerId"]);
         }
     }
