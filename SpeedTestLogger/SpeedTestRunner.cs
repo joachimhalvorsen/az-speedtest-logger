@@ -44,7 +44,9 @@ namespace SpeedTestLogger
                 {
                     Ip = _settings.Client.Ip,
                     Latitude = _settings.Client.Latitude,
+                    Lat = _settings.Client.Latitude,
                     Longitude = _settings.Client.Longitude,
+                    Lon = _settings.Client.Longitude,
                     Isp = _settings.Client.Isp,
                     Country = _location.TwoLetterISORegionName
                 },
@@ -52,9 +54,11 @@ namespace SpeedTestLogger
                 {
                     Host = server.Host,
                     Latitude = server.Latitude,
+                    Lat = server.Latitude,
                     Longitude = server.Longitude,
+                    Lon = server.Longitude,
                     Country = GetISORegionNameFromEnglishName(server.Country),
-                    Distance = server.Distance,
+                    Distance = (int)Math.Round(server.Distance),
                     Ping = server.Latency,
                     Id = server.Id
                 }

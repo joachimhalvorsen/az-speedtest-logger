@@ -28,7 +28,9 @@ namespace SpeedTestLogger.Models
     {
         public string Ip { get; set; }
         public double Latitude { get; set; }
+        public double Lat { get; set; }
         public double Longitude { get; set; }
+        public double Lon{ get; set; }
         public string Isp { get; set; }
         public string Country { get; set; }
     }
@@ -36,10 +38,12 @@ namespace SpeedTestLogger.Models
     public class TestServer
     {
         public string Host { get; set; }
+        public double Lat { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public double Lon { get; set; }
         public string Country { get; set; }
-        public double Distance { get; set; }
+        public int Distance { get; set; }
         public int Ping { get; set; }
         public int Id { get; set; }
     }
